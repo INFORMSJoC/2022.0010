@@ -9,7 +9,7 @@ Wang S, Delage E. A Column Generation Scheme for Distributionally Robust Multi-I
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 ```
-@article{contdecbeh,
+@article{wang2023column,
   author =        {S. Wang and E. Delage},
   publisher =     {INFORMS Journal on Computing},
   title =         {A column generation scheme for distributionally robust multi-item newsvendor problems},
