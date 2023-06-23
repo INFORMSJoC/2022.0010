@@ -20,14 +20,18 @@ To cite the contents of this repository, please cite both the paper and this rep
 
 ## Data files
 Collection of multi-item newsvendor instances in text format. 
+
 Each file contains 10 instances.
+
 Each instance name is in the oNm_k format, where N is the number of scenarios, m denotes the instances number, and k is optional and represents the number of items. There are 10 items without k.
+
 The first row is unit selling revenue.
 The second row is the upper bound of demands.
 The third row to the end is the scenarios of demands.
 
 ## Code files
 There are four folders. 
+
 ew_mad: it includes all the different algorithms described in "A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems" to solve the multi-item newsvendor problem under the EW-MAD ambiguity set.
 
 wasserstein: it includes all the different algorithms to solve the multi-item newsvendor problem under the Wasserstein ambiguity set.
