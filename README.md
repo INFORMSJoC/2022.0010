@@ -1,106 +1,42 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Data and Codes for A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems
 
-This archive is distributed in association with the [INFORMS Journal on
-Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
-
-The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+This repository includes the data and the codes for the following paper:
+Wang S, Delage E. A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems. INFORMS Journal on Computing, 2023.
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
-
-https://doi.org/10.1287/ijoc.2019.0000
-
-https://doi.org/10.1287/ijoc.2019.0000.cd
-
-Below is the BibTex for citing this snapshot of the respoitory.
-
 ```
-@article{CacheTest,
-  author =        {T. Ralphs},
+@article{wang2023column,
+  author =        {S. Wang and E. Delage},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
-}  
+  title =         {A column generation scheme for distributionally robust multi-item newsvendor problems},
+  year =          {2023},
+  url =           {https://github.com/INFORMSJoC/2022.0010},
+} 
 ```
 
-## Description
+## Data files
+Collection of multi-item newsvendor instances in text format. 
 
-The goal of this software is to demonstrate the effect of cache optimization.
+Each file contains 10 instances.
 
-## Building
+Each instance name is in the oNm_k format, where N is the number of scenarios, m denotes the instances number, and k is optional and represents the number of items. There are 10 items without k.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+The first row is unit selling revenue.
+The second row is the upper bound of demands.
+The third row to the end is the scenarios of demands.
 
-```
-make mult
-```
+## Code files
+There are four folders. 
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+ew_mad: it includes all the different algorithms described in "A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems" to solve the multi-item newsvendor problem under the EW-MAD ambiguity set.
 
-```
-make clean
-make sum
-```
+wasserstein: it includes all the different algorithms to solve the multi-item newsvendor problem under the Wasserstein ambiguity set.
 
-Be sure to make clean before building a different version of the code.
+oos_performance: it solves the DR and SAA multi-item newsvendor models in a data-driven environment described in Section 5.2.
 
-## Results
+functions: it includes all the functions used in folders "ew_mad", "wasserstein", and "oos_performance".
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
