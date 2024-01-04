@@ -3,7 +3,7 @@
 # Data and Codes for A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems
 
 This repository includes the data and the codes for the following paper:
-Wang S, Delage E. A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems. INFORMS Journal on Computing, 2023.
+Wang S, Delage E. [A Column Generation Scheme for Distributionally Robust Multi-Item Newsvendor Problems](https://doi.org/10.1287/ijoc.2022.0010). INFORMS Journal on Computing, 2023.
 
 ## Cite
 
